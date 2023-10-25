@@ -1,0 +1,624 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: creator_info
+  examples: |
+    - who made you?
+    - who's your creator?
+    - who developed you?
+
+- intent: bot_abilities
+  examples: |
+    - what all can you do?
+    - what can you do?
+    - what are you for?
+    - why were you made?
+    - why were you created?
+    - what are your abilities?
+    - what all do you know?
+    - what do you know?
+
+- intent: general_info
+  examples: |
+    - tell me something about the insti
+    - what is IIT Bombay?
+    - what is Indian Institute of Technology Bombay?
+    - describe IIT Bombay
+    - brief about IIT Bombay/Indian Institute of Technology Bombay
+    - what is the history of IIT Bombay?
+
+- intent: course_list
+  examples: |
+    - what courses does the institute offer?
+    - what are the courses offered by the institute?
+    - how many courses are there in the institute?
+    - list down the courses
+    - list down the courses at IIT Bombay
+
+- intent: faculty_list
+  examples: |
+    - tell me about faculties at IIT Bombay?
+    - who are the faculties at IIT Bombay?
+
+- intent: event_inquiry
+  examples: |
+    - What is [MoodI](eventName)?
+    - Tell about the event [MoodI](eventName).
+    - What happens in [MoodI](eventName)?
+    - What is [Tech Fest](eventName)?  
+    - What do you know about [Tech Fest](eventName)?
+    - Describe [Tech Fest](eventName)
+
+- intent: contact_inquiry
+  examples: |
+    - What are the contact details of professor [Rajkumar Pant](profName)?
+    - What are the contact details of prof [Tara Shaw](profName)?
+    - What is the phone number of professor [Rajkumar Pant](profName)?
+    - Please tell the telephone number of professor [Tara Shaw](profName).
+    - What is the phone number of professor [Rajkumar Pant](profName)?
+
+- intent: profs_of_a_dept
+  examples: |
+    - Who are the professors of [Aerospace Engineering](department)?
+    - Who is the professor of [Aerospace Engineering](department)?
+    - Who teaches [Aero](department)?
+    - Who teaches [Aerospace Engineering](department)?
+    - Who are the professors of [Maths](department)?
+    - Who teaches [Maths](department)?
+    - Who are the faculty of [Maths](department)?
+    - Who are the faculty of [IDC](department)?
+    - List [Aero](department) dept's faculty.
+    - List the professors of [Aero](department) Eng.
+
+- intent: prof_of_which_department
+  examples: |
+    - [Rajkumar Pant](profName) is a faculty of which department?
+    - [Pradeep Nair](profName) is a faculty of which department?
+    - [Sandeep Roy](profName) is a faculty of which department?
+    - [Sandip Roy](profName) teaches in which department?
+    -[Rajkumar Pant](profName) teaches in which department?
+    -[Sumant Rao](profName) teaches in which department?
+    - Which department does [Sumant Rao](profName) teach?
+    - Which department does [Jyoti Seth](profName) teach?
+    - Which department does [V. Kartik](profName) teach?
+    - Which department is professor [Jyoti Seth](profName) from?
+    - Which department is professor [Pradeep Nair](profName) from?
+    - Which department is professor [Sumant Rao](profName) from?
+    - What is the department of professor [Pradeep Nair](profName) ?
+    - What is the department of professor [Sumant Rao](profName) ?
+    - What is the department of professor [Rajkumar Rao](profName) ?
+    - What is the department of [V. Kartik](profName)?
+    - Which department is prof sumant from?
+    - Hey, what's the dept of prof rajkumar?
+    - What is prof rajkumar's dept?
+    - What is prof Sumant's dept?
+
+- intent: head_of_department_info
+  examples: |
+    - who is the HOD of [Physics](department)
+    - who is the hod of [Economics](department)
+    - who is the hod of [Chemistry](department)
+    - who is the hod of [Earth sciences](department)
+    - who is the hod of [Environmental Science and Engineering](department)
+    - who is the hod of [Aerospace Engineering](department)
+    - who is the hod of [Metallurgical Engineering](department)
+    - who is the hod of [Mechanical Engineering](department)
+    - who is the hod of [Mathematics](department)
+    - who is the hod of [Humanities and Social Sciences](department)
+    - who is the hod of [Energy Science and Engineering](department)
+    - who is the hod of [Electrical Engineering](department)
+    - who is the hod of [Computer Science and Engineering](department)
+    - who is the hod of [Civil Engineering](department)
+    - who is the hod of [Chemical Engineering](department)
+    - who is the hod of [Bioscience and Bioengineering](department)
+
+- intent: eventName
+  examples: |
+    - [MoodI](eventName)
+    - [Tech Fest](eventName)
+    - [Alumination](eventName)
+
+- intent: department
+  examples: |
+    - [Physics](department)
+    - [Economics](department)
+    - [Chemistry](department)
+    - [Earth sciences](department)
+    - [Environmental Science and Engineering](department)
+    - [Aerospace Engineering](department)
+    - [Metallurgical Engineering](department)
+    - [Mechanical Engineering](department)
+    - [Mathematics](department)
+    - [Humanities and Social Sciences](department)
+    - [Energy Science and Engineering](department)
+    - [Electrical Engineering](department)
+    - [Computer Science and Engineering](department)
+    - [Civil Engineering](department)
+    - [Chemical Engineering](department)
+    - [Bioscience and Bioengineering](department)
+    - [Chemical Engineering](department)
+    - [Edu Technology](department)
+    - [Sys & Cntrl Eng](department)
+    - [CTARA](department)
+    - [CPS](department)
+    - [IDC](department)
+    - [CESE](department)
+    - [CSRE](department)
+    - [IE & OR](department)
+    - [SJM School Of Management](department)
+
+- intent: profName
+  examples: |
+    - [Prasanna Mujumdar](profName) 
+    - [Rajkumar Pant](profName) 
+    - [Jadav Mandal](profName) 
+    - [Devang Khakhar](profName) 
+    - [Sandip Roy](profName) 
+    - [Jayesh Ramesh Bellare](profName) 
+    - [Anurag Mehra](profName) 
+    - [Nand Kishore](profName) 
+    - [Pradipta Banerji](profName) 
+    - [Alok Goyal](profName) 
+    - [Ravi Sinha](profName) 
+    - [Ajit Diwan](profName) 
+    - [Pushpak Bhattacharyya](profName) 
+    - [G Sivakumar](profName) 
+    - [Sharat Chandran](profName) 
+    - [Shivganesh Bhargava](profName) 
+    - [Murali Srinivasan](profName) 
+    - [Sanjeev Sabnis](profName) 
+    - [Sudhir Ghorpade](profName) 
+    - [Jugal Verma](profName) 
+    - [P. Vellaisamy](profName) 
+    - [Karuna Jain](profName) 
+    - [Seshu Pasumarthy](profName) 
+    - [Narayan Rangaraj](profName) 
+    - [Rajendra Vedula](profName) 
+    - [Prashant Date](profName) 
+    - [Dhanesh Manik](profName) 
+    - [Bhallamudi Ravi](profName) 
+    - [Nithyanand Prabhu](profName) 
+    - [Krishnaiyengar Narasimhan](profName) 
+    - [Buddhiraju Mohan](profName) 
+    - [Jagarlapudi Adinarayana](profName) 
+    - [Rohit Manchanda](profName) 
+    - [Shyam Asolekar](profName) 
+    - [Rajiv Dusane](profName) 
+    - [Sanjay Mahajani](profName) 
+    - [Shripad Mahulikar](profName) 
+    - [Nurni Viswanathan](profName) 
+    - [Mukul Chandorkar](profName) 
+    - [Virendra Sethi](profName) 
+    - [Sreekumar G.V](profName) 
+    - [Prashant Phale](profName) 
+    - [Gajendra Kumar Adil](profName) 
+    - [Kavi Arya](profName) 
+    - [Usha Ananthakumar](profName) 
+    - [Santosh Noronha](profName) 
+    - [Irishi Namboothiri](profName) 
+    - [Krishna Kaliappan](profName) 
+    - [Shrikrishna Kulkarni](profName) 
+    - [Avijit Chatterjee](profName) 
+    - [Shishir Jha](profName) 
+    - [Eldho Thekkilakkattu](profName) 
+    - [Uday Khedker](profName) 
+    - [Pichai Ramadevi](profName) 
+    - [Prasanna Gandhi](profName) 
+    - [Shireesh Kedare](profName) 
+    - [Tom Mathew](profName) 
+    - [Harish Pillai](profName) 
+    - [K. Sureshkumar](profName) 
+    - [Shilpa Ranade](profName) 
+    - [Santanu Bandyopadhyay](profName) 
+    - [Battula Chakravarthy](profName) 
+    - [Krishnan Narayanan](profName) 
+    - [Sachin Patwardhan](profName) 
+    - [Souvik Mahapatra](profName) 
+    - [Varsha Apte](profName) 
+    - [Siddhartha Duttagupta](profName) 
+    - [Anindya Dutta](profName) 
+    - [Sharad Bhartiya](profName) 
+    - [Umesh Bellur](profName) 
+    - [Hemendra Arya](profName) 
+    - [Malhar Kulkarni](profName) 
+    - [Swati Patankar](profName) 
+    - [Hetu Sheth](profName) 
+    - [George Mathew](profName) 
+    - [S. Prabhu](profName) 
+    - [Rajendra Sonar](profName) 
+    - [Sharmila Sreekumar](profName) 
+    - [Tony Joseph](profName) 
+    - [Madhu Vinjamur](profName) 
+    - [Prasenjit Ghosh](profName) 
+    - [Raja Mohanty](profName) 
+    - [Naresh Patwari Ganpathi](profName) 
+    - [Neela Nataraj](profName) 
+    - [Deepankar Choudhury](profName) 
+    - [Raghavan Sunoj](profName) 
+    - [Mahesh Tirumkudulu](profName) 
+    - [Arup Bhattacharyya](profName) 
+    - [Anil Dikshit](profName) 
+    - [Siddhartha Ghosh](profName) 
+    - [Dibyendu Das](profName) 
+    - [Madhu Belur](profName) 
+    - [Anirban Sain](profName) 
+    - [Bhalchandra Puranik](profName) 
+    - [C. Sebastian](profName) 
+    - [Ranjan Panda](profName) 
+    - [Dnyanesh Pawaskar](profName) 
+    - [Atul Sharma](profName) 
+    - [Vikram Sirola](profName) 
+    - [Krishnamurthi Ramasubramanian](profName) 
+    - [Amit Agrawal](profName) 
+    - [Pooja Purang](profName) 
+    - [Upendra Bhandarkar](profName) 
+    - [Jhumpa Adhikari](profName) 
+    - [Enamundram Chandrasekhar](profName) 
+    - [Basanta Nandi](profName) 
+    - [Ravi Raghunathan](profName) 
+    - [Pradeep Amboor Madathil](profName) 
+    - [Om Damani](profName) 
+    - [Rochish Thaokar](profName) 
+    - [Bikash Dey](profName) 
+    - [Ashish Juneja](profName) 
+    - [Asmita Mukherjee](profName) 
+    - [Anirban Guha](profName) 
+    - [Naresh Chandiramani](profName) 
+    - [U. Anandavardhanan](profName) 
+    - [Manoj Keshari](profName) 
+    - [Arunkumar Sridharan](profName) 
+    - [Jayendran Venkateswaran](profName) 
+    - [Parag Bhargava](profName) 
+    - [V. Jothiprakash](profName) 
+    - [Rohit Srivastava](profName) 
+    - [Prabhu Ramachandran](profName) 
+    - [Milind Atrey](profName) 
+    - [Mani Bhushan](profName) 
+    - [Prita Pant](profName) 
+    - [Krishnendu Sinha](profName) 
+    - [Sarika Mehra](profName) 
+    - [S Baskar](profName) 
+    - [D Ramakrishnan](profName) 
+    - [Subhabrata Dhar](profName) 
+    - [Swapneel Mahajan](profName) 
+    - [Arindam Chowdhury](profName) 
+    - [Anand Rao](profName) 
+    - [Subodh Wagle](profName) 
+    - [Anil Kottantharayil](profName) 
+    - [Sudarshan Kumar](profName) 
+    - [Purushottam Kulkarni](profName) 
+    - [Prakash Chandra Ghosh](profName) 
+    - [Jayanta Mukherjee](profName) 
+    - [Manoj Neergat](profName) 
+    - [Pratibha Sharma](profName) 
+    - [Sivaji Ganesh Sista](profName) 
+    - [Rajdip Bandyopadhyaya](profName) 
+    - [Ratikanta Panda](profName) 
+    - [Rajakishore Nath](profName) 
+    - [Manne Janga Reddy](profName) 
+    - [Siby George](profName) 
+    - [Viren Menezes](profName) 
+    - [Preeti Raman](profName) 
+    - [Mallikarjuna Rao K.S.](profName) 
+    - [Satyanarayana Dasaka](profName) 
+    - [Sumant Rao](profName) 
+    - [Bharat Adsul](profName) 
+    - [M Radhakrishna](profName) 
+    - [Azizuddin Khan](profName) 
+    - [Prasanna Chaporkar](profName) 
+    - [Anurag Garg](profName) 
+    - [Suryendu Dutta](profName) 
+    - [Sandesh Ramu](profName) 
+    - [Ashish Das](profName) 
+    - [Bhaskaran Raman](profName) 
+    - [Kameswari Chebrolu](profName) 
+    - [Rodney Fernandes](profName) 
+    - [Vinish Kumar Kathuria](profName) 
+    - [Subhananda Chakrabarti](profName) 
+    - [Haripriya Gundimeda](profName) 
+    - [Rajbabu Velmurugan](profName) 
+    - [Shivaramakrishnan Sivasubraman](profName) 
+    - [Pradeep Kumar P. I.](profName) 
+    - [Mrinmoyi Kulkarni](profName) 
+    - [Subimal Ghosh](profName) 
+    - [Shripad Garge](profName) 
+    - [Mandar Rane](profName) 
+    - [Debraj Chakraborty](profName) 
+    - [Siuli Mukhopadhyay](profName) 
+    - [Subhankar Karmakar](profName) 
+    - [Mohammed Aslam](profName) 
+    - [Trupti Mishra](profName) 
+    - [Ganesh Viswanathan](profName) 
+    - [Dinesh Sharma](profName) 
+    - [Punit Parmananda](profName) 
+    - [Ramesh Singh](profName) 
+    - [Rahul Patil](profName) 
+    - [Ruchi Anand](profName) 
+    - [Pankaj Dutta](profName) 
+    - [Indrajit Mukherjee](profName) 
+    - [Sauvik Banerjee](profName) 
+    - [Vishnu Narayanan](profName) 
+    - [Sarmistha Pattanaik](profName) 
+    - [N Narayanan](profName) 
+    - [Ramesh Bairy T.S.](profName) 
+    - [Rajesh Gupta](profName) 
+    - [Puja Padhi](profName) 
+    - [Pravesh Golay](profName) 
+    - [Samir Maji](profName) 
+    - [Sanjeeva Srivastava](profName) 
+    - [Santanu Ghosh](profName) 
+    - [Soumyajit Mukherjee](profName) 
+    - [Arpita Sinha](profName) 
+    - [Suvarn Kulkarni](profName) 
+    - [Pradeep Sarin](profName) 
+    - [Sagar Mitra](profName) 
+    - [Sahana Murthy](profName) 
+    - [Ganesh Ramakrishnan](profName) 
+    - [Purba Joshi](profName) 
+    - [Surajit Bhattacharyya](profName) 
+    - [Salil Kulkarni](profName) 
+    - [Gopal Patil](profName) 
+    - [Sibi raj Bhaskaran Pillai](profName) 
+    - [Dipankar Saha](profName) 
+    - [Parag Kumar Chaudhuri](profName) 
+    - [Nishant Sharma](profName) 
+    - [Mogadalai Gururajan](profName) 
+    - [Saravanan Vijayakumaran](profName) 
+    - [Sudhanshu Mallick](profName) 
+    - [Ranjith Padinhateeri](profName) 
+    - [Ajay Panwar](profName) 
+    - [Swaroop Ganguly](profName) 
+    - [Bakul Rao](profName) 
+    - [Krishna Jonnalagadda](profName) 
+    - [Santanu Dey](profName) 
+    - [Shalabh Gupta](profName) 
+    - [Malay Mukul](profName) 
+    - [Ashish Pandey](profName) 
+    - [Manaswita Bose](profName) 
+    - [Suneet Singh](profName) 
+    - [Perumal Vedagiri](profName) 
+    - [Leena Vachhani](profName) 
+    - [Kirankumar Momaya](profName) 
+    - [Sudesh Balan](profName) 
+    - [Gopalan Rajaraman](profName) 
+    - [Ashwin Tulapurkar](profName) 
+    - [Arindrajit Chowdhury](profName) 
+    - [Udayan Ganguly](profName) 
+    - [Alok Porwal](profName) 
+    - [Saurabh Lodha](profName) 
+    - [Shamik Sen](profName) 
+    - [Asim Tewari](profName) 
+    - [Sreedhara Sheshadri](profName) 
+    - [Arti Kalro](profName) 
+    - [Paulomi Chakraborty](profName) 
+    - [Debabrata Maiti](profName) 
+    - [Ashutosh Kumar](profName) 
+    - [Kantimay Das Gupta](profName) 
+    - [Anshuman Shukla](profName) 
+    - [Kiran Kondabagilu](profName) 
+    - [Parinda Vasa](profName) 
+    - [Maheswaran Shanmugam](profName) 
+    - [Surya Durbha](profName) 
+    - [Atul Srivastava](profName) 
+    - [Balaji Ramakrishnan](profName) 
+    - [Debasish Chatterjee](profName) 
+    - [Prakash Nanthagopalan](profName) 
+    - [Padubidri Guruprasad](profName) 
+    - [Kumar Singh](profName) 
+    - [Smrutiranjan Parida](profName) 
+    - [Prasenjit Bhaumik](profName) 
+    - [Vasudeva Raghavendra Kowsik Bo](profName) 
+    - [Prakriti Tayalia](profName) 
+    - [V. Kartik](profName) 
+    - [Somnath Basu](profName) 
+    - [Pradeep Nair](profName) 
+    - [Amartya Mukhopadhyay](profName) 
+    - [Niranjan Balachandran](profName) 
+    - [Sadhana Dash](profName) 
+    - [Tanmay Bhandakkar](profName) 
+    - [Kumarswamy Rao](profName) 
+    - [Sukumar Srikant](profName) 
+    - [Dipti Gupta](profName) 
+    - [Niranjan Tarikere](profName) 
+    - [Virendra Singh](profName) 
+    - [Apurba Laha](profName) 
+    - [Sumit Saxena](profName) 
+    - [Shobha Shukla](profName) 
+    - [Balasubramaniam Kavaipatti](profName) 
+    - [Prachi Mahajan](profName) 
+    - [Arindam Sarkar](profName) 
+    - [voleti Kavitha](profName) 
+    - [Debjani Paul](profName) 
+    - [Bhaskaran Muralidharan](profName) 
+    - [Ambarish Kunwar](profName) 
+    - [Rajneesh Bhardwaj](profName) 
+    - [Parag Tandaiya](profName) 
+    - [Partha Goswami](profName) 
+    - [Ashutosh Mahajan](profName) 
+    - [RAAJ Ramsankaran](profName) 
+    - [Yogendra Shastri](profName) 
+    - [Santosh Gharpure](profName) 
+    - [Supreet Saini](profName) 
+    - [Sankara Sarma Tatiparti](profName) 
+    - [Ateeque Malani](profName) 
+    - [Rama Pal](profName) 
+    - [Rekha Santhanam](profName) 
+    - [Priyadarshani Jadhav](profName) 
+    - [Anirban Banerjee](profName) 
+    - [Venkata Gundabala](profName) 
+    - [Shivasubramanian Gopalakrishna](profName) 
+    - [Dinesh Kabra](profName) 
+    - [Sridhar Balasubramanian](profName) 
+    - [Ananthnarayan Hariharan](profName) 
+    - [Prasad Manepalli](profName) 
+    - [Sushil Mishra](profName) 
+    - [Sandip Saha](profName) 
+    - [Dharamveer Singh](profName) 
+    - [Gaurav Kasbekar](profName) 
+    - [Ankur Kulkarni](profName) 
+    - [Abhijit Chatterjee](profName) 
+    - [Avijit Maji](profName) 
+    - [Amit Arora](profName) 
+    - [Nagendra Rao Velaga](profName) 
+    - [S. Akshay](profName) 
+    - [Suddhasatta Mahapatra](profName) 
+    - [Jyoti Seth](profName) 
+    - [Sandip Kar](profName) 
+    - [Ravindra Gudi](profName) 
+    - [Munish Kumar Chandel](profName) 
+    - [Ajit Rajwade](profName) 
+    - [Manasa Behera](profName) 
+    - [Kums P Kumaresan](profName) 
+    - [Mythili Vutukuru](profName) 
+    - [Alka Hingorani](profName) 
+    - [Radhendushka Srivastava](profName) 
+    - [Mithun Mitra](profName) 
+    - [Aftab Alam](profName) 
+    - [Suyash Awate](profName) 
+    - [Tara Shaw](profName) 
+    - [Venkatasailanathan Ramadesigan](profName) 
+    - [Girish Dalvi](profName) 
+    - [Anupama Kowli](profName) 
+    - [Venkatesh Rajamanickam](profName) 
+    - [Ratul Dasgupta](profName) 
+    - [Aniruddha Sinha](profName) 
+    - [Amit Kumar Das](profName) 
+    - [Bharath Shekar](profName)
+
+- synonym: insti
+  examples: |
+    - institute
+    - indian institute of technology bombay
+    - IIT Bombay
+    - iitb
+    - iit
+
+- synonym: faculty
+  examples: |
+    - prof
+    - professor
+    - prof
+
+- synonym: dept
+  examples: |
+    - department
+    - subject
+    - field
+
+- synonym: HOD
+  examples: |
+    - head of department
+    - department head
+
+- synonym: Metallurgical Engineering
+  examples: |
+    - meta
+    - metallurgy
+    - metallurgical engineering and material sciences
+    - material sciences
+    - material science
+    - MEMS
+    - metallurgical engineering
+    - sundar pichai ka branch
+
+- synonym: Eng
+  examples: |
+    - Engineering
+    - Eng.
+
+- synonym: Aerospace
+  examples: |
+    - Aero
+    - Aerospace Engineering
+    - Aero Eng.
+    - Aero Engineering
+    - Aerospace Eng.

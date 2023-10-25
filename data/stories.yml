@@ -1,0 +1,81 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: about app
+  steps:
+  - intent: creator_info
+  - action: utter_creator_info
+
+- story: about institute
+  steps:
+  - intent: general_info
+  - action: utter_general_info
+
+- story: bot information
+  steps:
+  - intent: bot_abilities
+  - action: utter_bot_abilities
+
+- story: list of courses offered
+  steps:
+  - intent: course_list
+  - action: utter_course_list
+
+- story: list of faculties
+  steps:
+  - intent: faculty_list
+  - action: utter_faculty_list
+
+- story: head of department information
+  steps:
+  - intent: head_of_department_info
+  - action: utter_head_of_department_info
+
+- story: department of professor
+  steps:
+  - intent: prof_of_which_department
+  - action: utter_prof_of_which_department
+  - action: action_get_dept_name
+
+- story: professors of a department
+  steps:
+  - intent: profs_of_a_dept
+  - action: action_get_prof_name
+
+- story: event details
+  steps:
+  - intent: event_inquiry
+  - action: action_get_event_details
+
+- story: contact details
+  steps:
+  - intent: contact_inquiry
+  - action: action_get_contact_details

@@ -1,0 +1,465 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - creator_info
+  - bot_abilities
+  - general_info
+  - course_list
+  - faculty_list
+  - head_of_department_info
+  - department
+  - prof_of_which_department
+  - profName
+  - profs_of_a_dept
+  - event_inquiry
+  - contact_inquiry
+
+entities:
+  - department
+  - profName
+  - eventName
+
+synonyms:
+  - insti
+  - HOD
+  - Metallurgical Engineering
+  - faculty
+  - dept
+  - Eng
+  - Aerospace
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa, trained on IITB's data, by Amit"
+
+  utter_creator_info:
+  - text: "I was trained by Amit Jaiswal, a 1st year student from MEMS department"
+
+  utter_bot_abilities:
+  - text: "I can provide a lot of information about IITB, including insights ;)"
+
+  utter_general_info:
+  - text: " Established in 1958, the second of its kind, IIT Bombay was the first to be set up with foreign assistance. The funds from UNESCO came as Roubles from the then Soviet Union. In 1961 Parliament decreed the  IITs as  ‘Institutes of National Importance'. Since then, IITB has grown from strength to strength to emerge as one of the top technical universities in the world.
+
+The institute is recognised worldwide as a leader in the field of engineering education and research. Reputed for the outstanding calibre of students graduating from its undergraduate and postgraduate programmes, the institute attracts the best students from the country for its bachelor's, master's and doctoral programmes. Research and academic programmes at IIT Bombay are driven by an outstanding faculty, many of whom are reputed for their research contributions internationally.
+
+IIT Bombay also builds links with peer universities and  institutes, both at national and international levels, to enhance research and educational programmes. The alumni have distinguished themselves through their achievements and contributions in industry, academics, research, business, government and social domains. The institute continues to work closely with the alumni to enhance its activities through interactions in academic and research programmes as well as mobilising financial support.
+
+Over the years, the institute has created a niche for its innovative short-term courses through continuing education and distance education programmes. In 2011, a total of 1846 degrees, including 173 Ph.D., were awarded, which represent 9.2 per cent increase in the total number of degrees awarded in the previous year. The faculty of the institute has won many prestigious awards and recognitions, including nine Shanti Swaroop Bhatnagar awards.
+
+Residents at IIT Bombay have the advantage of being located in the financial capital of India while enjoying the serenity of the Powai campus, situated in the northern suburbs of Mumbai, in Western India. A fully residential institute, with all its students staying on campus, students are accommodated in 14 hostels with in-house dining and excellent amenities for sports and other recreational facilities"
+
+  utter_course_list:
+    - text: "Following are the science and engineering departments at IIT Bombay
+
+Aerospace Engineering
+Biosciences and Bioengineering
+Chemical Engineering
+Chemistry
+Civil Engineering
+Computer Science & Engineering
+Earth Sciences
+Economics
+Electrical Engineering
+Energy Science and Engineering
+Environmental Science and Engineering (ESED)
+Humanities & Social Sciences
+Mathematics
+Mechanical Engineering
+Metallurgical Engineering & Materials Science
+Physics"
+
+  utter_faculty_list:
+  - text: "The faculties at IIT Bombay are listed below
+    Prasanna Mujumdar
+Rajkumar Pant
+Jadav Mandal
+Devang Khakhar
+Sandip Roy
+Jayesh Ramesh Bellare
+Anurag Mehra
+Nand Kishore
+Pradipta Banerji
+Alok Goyal Ravi Sinha
+Ajit Diwan
+Pushpak Bhattacharyya
+G Sivakumar
+Sharat Chandran
+Shivganesh Bhargava
+Murali Srinivasan
+Sanjeev Sabnis
+Sudhir Ghorpade
+Jugal Verma
+P Vellaisamy
+Karuna Jain
+Seshu Pasumarthy
+Narayan Rangaraj
+Rajendra Vedula
+Prashant Date
+Dhanesh Manik
+Bhallamudi Ravi
+Nithyanand Prabhu
+Krishnaiyengar Narasimhan
+Buddhiraju Mohan
+Jagarlapudi Adinarayana
+Rohit Manchanda
+Shyam Asolekar
+Rajiv Dusane
+Sanjay Mahajani
+Shripad Mahulikar
+Nurni Viswanathan
+Mukul Chandorkar
+Virendra Sethi
+Sreekumar GV
+Prashant Phale
+Gajendra Kumar Adil
+Kavi Arya
+Usha Ananthakumar
+Santosh Noronha
+Irishi Namboothiri
+Krishna Kaliappan
+Shrikrishna Kulkarni
+Avijit Chatterjee
+Shishir Jha
+Eldho Thekkilakkattu
+Uday Khedker
+Pichai Ramadevi
+Prasanna Gandhi
+Shireesh Kedare
+Tom Mathew
+Harish Pillai
+K Sureshkumar
+Shilpa Ranade
+Santanu Bandyopadhyay
+Battula Chakravarthy
+Krishnan Narayanan
+Sachin Patwardhan
+Souvik Mahapatra
+Varsha Apte
+Siddhartha Duttagupta
+Anindya Dutta
+Sharad Bhartiya
+Umesh Bellur
+Hemendra Arya
+Malhar Kulkarni
+Swati Patankar
+Hetu Sheth
+George Mathew
+S Prabhu
+Rajendra Sonar
+Sharmila Sreekumar
+Tony Joseph
+Madhu Vinjamur
+Prasenjit Ghosh
+Raja Mohanty
+Naresh Patwari Ganpathi
+Neela Nataraj
+Deepankar Choudhury
+Raghavan Sunoj
+Mahesh Tirumkudulu
+Arup Bhattacharyya
+Anil Dikshit
+Siddhartha Ghosh
+Dibyendu Das
+Madhu Belur
+Anirban Sain
+Bhalchandra Puranik
+C Sebastian
+Ranjan Panda
+Dnyanesh Pawaskar
+Atul Sharma
+Vikram Sirola
+Krishnamurthi Ramasubramanian
+Amit Agrawal
+Pooja Purang
+Upendra Bhandarkar
+Jhumpa Adhikari
+Enamundram Chandrasekhar
+Basanta Nandi
+Ravi Raghunathan
+Pradeep Amboor Madathil
+Om Damani
+Rochish Thaokar
+Bikash Dey
+Ashish Juneja
+Asmita Mukherjee
+Anirban Guha
+Naresh Chandiramani
+U Anandavardhanan
+Manoj Keshari
+Arunkumar Sridharan
+Jayendran Venkateswaran
+Parag Bhargava
+V Jothiprakash
+Rohit Srivastava
+Prabhu Ramachandran
+Milind Atrey
+Mani Bhushan
+Prita Pant
+Krishnendu Sinha
+Sarika Mehra
+S Baskar
+D Ramakrishnan
+Subhabrata Dhar
+Swapneel Mahajan
+Arindam Chowdhury
+Anand Rao
+Subodh Wagle
+Anil Kottantharayil
+Sudarshan Kumar
+Purushottam Kulkarni
+Prakash Chandra Ghosh
+Jayanta Mukherjee
+Manoj Neergat
+Pratibha Sharma
+Sivaji Ganesh Sista
+Rajdip Bandyopadhyaya
+Ratikanta Panda
+Rajakishore Nath
+Manne Janga Reddy
+Siby George
+Viren Menezes
+Preeti Raman
+Mallikarjuna Rao KS
+Satyanarayana Dasaka
+Sumant Rao
+Bharat Adsul
+M Radhakrishna
+Azizuddin Khan
+Prasanna Chaporkar
+Anurag Garg
+Suryendu Dutta
+Sandesh Ramu
+Ashish Das
+Bhaskaran Raman
+Kameswari Chebrolu
+Rodney Fernandes
+Vinish Kumar Kathuria
+Subhananda Chakrabarti
+Haripriya Gundimeda
+Rajbabu Velmurugan
+Shivaramakrishnan Sivasubraman
+Pradeep Kumar PI
+Mrinmoyi Kulkarni
+Subimal Ghosh
+Shripad Garge
+Mandar Rane
+Debraj Chakraborty
+Siuli Mukhopadhyay
+Subhankar Karmakar
+Mohammed Aslam
+Trupti Mishra
+Ganesh Viswanathan
+Dinesh Sharma
+Punit Parmananda
+Ramesh Singh
+Rahul Patil
+Ruchi Anand
+Pankaj Dutta
+Indrajit Mukherjee
+Sauvik Banerjee
+Vishnu Narayanan
+Sarmistha Pattanaik
+N Narayanan
+Ramesh Bairy TS
+Rajesh Gupta
+Puja Padhi
+Pravesh Golay
+Samir Maji
+Sanjeeva Srivastava
+Santanu Ghosh
+Soumyajit Mukherjee
+Arpita Sinha
+Suvarn Kulkarni
+Pradeep Sarin
+Sagar Mitra
+Sahana Murthy
+Ganesh Ramakrishnan
+Purba Joshi
+Surajit Bhattacharyya
+Salil Kulkarni
+Gopal Patil
+Sibi raj Bhaskaran Pillai
+Dipankar Saha
+Parag Kumar Chaudhuri
+Nishant Sharma
+Mogadalai Gururajan
+Saravanan Vijayakumaran
+Sudhanshu Mallick
+Ranjith Padinhateeri
+Ajay Panwar
+Swaroop Ganguly
+Bakul Rao
+Krishna Jonnalagadda
+Santanu Dey
+Shalabh Gupta
+Malay Mukul
+Ashish Pandey
+Manaswita Bose
+Suneet Singh
+Perumal Vedagiri
+Leena Vachhani
+Kirankumar Momaya
+Sudesh Balan
+Gopalan Rajaraman
+Ashwin Tulapurkar
+Arindrajit Chowdhury
+Udayan Ganguly
+Alok Porwal
+Saurabh Lodha
+Shamik Sen
+Asim Tewari
+Sreedhara Sheshadri
+Arti Kalro
+Paulomi Chakraborty
+Debabrata Maiti
+Ashutosh Kumar
+Kantimay Das Gupta
+Anshuman Shukla
+Kiran Kondabagilu
+Parinda Vasa
+Maheswaran Shanmugam
+Surya Durbha
+Atul Srivastava
+Balaji Ramakrishnan
+Debasish Chatterjee
+Prakash Nanthagopalan
+Padubidri Guruprasad
+Kumar Singh
+Smrutiranjan Parida
+Prasenjit Bhaumik
+Prakriti Tayalia
+V Kartik
+Somnath Basu
+Pradeep Nair
+Amartya Mukhopadhyay
+Niranjan Balachandran
+Sadhana Dash
+Tanmay Bhandakkar
+Kumarswamy Rao
+Sukumar Srikant
+Dipti Gupta
+Niranjan Tarikere
+Virendra Singh
+Apurba Laha
+Sumit Saxena
+Shobha Shukla
+Balasubramaniam Kavaipatti
+Prachi Mahajan
+Arindam Sarkar
+voleti Kavitha
+Debjani Paul
+Bhaskaran Muralidharan
+Ambarish Kunwar
+Rajneesh Bhardwaj
+Parag Tandaiya
+Partha Goswami
+Ashutosh Mahajan
+RAAJ Ramsankaran
+Yogendra Shastri
+Santosh Gharpure
+Supreet Saini
+Sankara Sarma Tatiparti
+Ateeque Malani
+Rama Pal
+Rekha Santhanam
+Priyadarshani Jadhav
+Anirban Banerjee
+Venkata Gundabala
+Shivasubramanian Gopalakrishna
+Dinesh Kabra
+Sridhar Balasubramanian
+Ananthnarayan Hariharan
+Prasad Manepalli
+Sushil Mishra
+Sandip Saha
+Dharamveer Singh
+Gaurav Kasbekar
+Ankur Kulkarni
+Abhijit Chatterjee
+Avijit Maji
+Amit Arora
+Nagendra Rao Velaga
+S Akshay
+Suddhasatta Mahapatra
+Jyoti Seth
+Sandip Kar
+Ravindra Gudi
+Munish Kumar Chandel
+Ajit Rajwade
+Manasa Behera
+Kums P Kumaresan
+Mythili Vutukuru
+Alka Hingorani
+Radhendushka Srivastava
+Mithun Mitra
+Aftab Alam
+Suyash Awate
+Tara Shaw
+Venkatasailanathan Ramadesigan
+Girish Dalvi
+Anupama Kowli
+Venkatesh Rajamanickam
+Ratul Dasgupta
+Aniruddha Sinha
+Amit Kumar Das
+Bharath Shekar"
+
+  utter_head_of_department_info:
+  - text: "The head of the department of {department} is {HOD_of_depts}"
+
+  utter_prof_of_which_department:
+  - text: "Fetching the professor's department."
+
+slots:
+  profName:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: profName
+  department:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: department
+  eventName:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: eventName
+
+actions:
+  - action_get_dept_name
+  - action_get_prof_name
+  - action_get_contact_details
+  - action_get_event_details
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

@@ -1,0 +1,35 @@
+{
+  "department": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 92,
+    "confused_with": {}
+  },
+  "profName": {
+    "precision": 1.0,
+    "recall": 0.9862068965517241,
+    "f1-score": 0.9930555555555556,
+    "support": 725,
+    "confused_with": {}
+  },
+  "micro avg": {
+    "precision": 1.0,
+    "recall": 0.9877600979192166,
+    "f1-score": 0.9938423645320197,
+    "support": 817
+  },
+  "macro avg": {
+    "precision": 1.0,
+    "recall": 0.993103448275862,
+    "f1-score": 0.9965277777777778,
+    "support": 817
+  },
+  "weighted avg": {
+    "precision": 1.0,
+    "recall": 0.9877600979192166,
+    "f1-score": 0.9938375492996057,
+    "support": 817
+  },
+  "accuracy": 0.9925595238095238
+}

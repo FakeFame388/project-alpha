@@ -1,0 +1,28 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-department",
+      "2": "I-department",
+      "3": "L-department",
+      "4": "U-department",
+      "5": "B-profName",
+      "6": "I-profName",
+      "7": "L-profName",
+      "8": "U-profName",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-department": 1,
+      "I-department": 2,
+      "L-department": 3,
+      "U-department": 4,
+      "B-profName": 5,
+      "I-profName": 6,
+      "L-profName": 7,
+      "U-profName": 8,
+      "O": 0
+    },
+    "num_tags": 9
+  }
+]
