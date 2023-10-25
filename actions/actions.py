@@ -53,7 +53,7 @@ class ActionGetContactDetails(Action):
                  for key in item.keys():
                      if operator.contains(key, profName):
                          dispatcher.utter_message(text=f"The contact detail of the professor {profName} is {item[key]}")
-             return [SlotSet(profName, None)]
+             return [SlotSet("profName", None)]
 
 class ActionGetEventDetails(Action):         def name(self) -> Text:                     return "action_get_event_details"                                           def run(self,                                   dispatcher: CollectingDispatcher,
              tracker: Tracker,
